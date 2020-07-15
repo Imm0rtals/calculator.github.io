@@ -123,3 +123,18 @@ inputDecimal = (dot)=>{
 	};
 	currentNumber += dot;
 };
+
+// mengkalkulasi angka menggunakan fungsi percentage
+const percentage = document.querySelector('.percentage');
+
+percentage.addEventListener('click', (event)=>{
+	inputPercentage(event.target.value);
+	updateScreen(currentNumber);
+});
+
+inputPercentage = (percent)=>{
+	if(currentNumber.includes('%')){
+		return;
+	};
+	currentNumber /= percent;
+};
